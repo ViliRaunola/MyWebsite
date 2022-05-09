@@ -1,0 +1,18 @@
+.footer {
+    height: 100px;
+    background-color: #1d3557;
+}
+
+.textFooter {
+    padding-top: 1em;
+}
+
+.linkFooter {
+    text-decoration: none;
+    display: inline;
+    padding: 1em;
+    font-weight: 700;
+    font-size: smaller;
+    cursor: pointer;
+    color: black;
+}
