@@ -10,4 +10,6 @@
 .navbar {
     height: 60px;
     background-color: #1d3557;
+    position: sticky;
+    top: 0;
   }
