@@ -7,7 +7,7 @@
     cursor: pointer;
   }
 
-.navbar {
+.navbarsticky {
     height: 60px;
     background-color: #1d3557;
     position: sticky;
