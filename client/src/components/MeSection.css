@@ -1,8 +1,60 @@
 .mesection {
-    height: 600px;
-    background-color: #a8dadc;
+    height: 800px;
+    background-color: #f1faee;
+    
+}
+
+.ul-group {
+    list-style-type: none;
+    place-self: 'center';
+}
+
+.card-div{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  
+    gap: 3em;
+    grid-auto-flow: column;
+
+    padding-top: 1em;
 }
 
 * {
     margin: 0;
+}
+
+.li-item-me-section {
+    padding: 0.3em;
+}
+
+
+.fishing-image {
+    width: 350px;
+    clip-path: circle();
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card-div{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+      
+        gap: 1px;
+        grid-auto-flow: row;
+    
+        padding-top: 1em;
+    }
+
+    .mesection {
+        height: 1100px;
+        background-color: #a8dadc;
+    }
+
+    .lutLogo {
+        order: 1;
+    }
 }
