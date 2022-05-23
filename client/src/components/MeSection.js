@@ -33,9 +33,9 @@ function Section({reference}) {
 
   return (
     <div ref={reference} className='mesection' >
-        <h1 style={{paddingTop: '0.3em'}}>About Me</h1>
+        <h1 style={{paddingTop: '0.3em', paddingBottom: '1em'}}>About Me</h1>
 
-        <div className='card-div'>
+        <div className='card-div' id='first-box'>
 
           <img height={150} src={lutLogo} alt='LUT Logo' className='lutLogo'/>
 
@@ -51,6 +51,8 @@ function Section({reference}) {
           </div>
 
         </div>
+
+        <div className='card-seperator'/>
 
         <div className='card-div'>
           <div>

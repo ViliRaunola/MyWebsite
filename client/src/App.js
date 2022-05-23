@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import MeSection from './components/MeSection'
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import { useRef, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -52,7 +53,7 @@ function App() {
       <Navbar handelScroll={scrollToSection} meRef={meRef} projectsRef={projectsRef} contactRef={contactRef} meVisible={meActive} projectsVisible={projectsActive} contactVisible={contactActive}></Navbar>
       <MeSection reference={meRef}></MeSection>
       <Section title={'My projects'} color={'#a8dadc'} reference={projectsRef} ></Section>
-      <Section title={'Contact Me'} color={'#f1faee'} reference={contactRef}></Section>
+      <ContactSection reference={contactRef}></ContactSection>
       <Footer handelScroll={scrollToSection} meRef={meRef} projectsRef={projectsRef} contactRef={contactRef}></Footer>
     </div>
   )

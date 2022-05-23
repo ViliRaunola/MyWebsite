@@ -1,5 +1,5 @@
 .mesection {
-    height: 800px;
+    height: 850px;
     background-color: #f1faee;
     
 }
@@ -17,9 +17,16 @@
   
     gap: 3em;
     grid-auto-flow: column;
-
-    padding-top: 1em;
 }
+
+.card-seperator{
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+    padding-top: 2.5em;
+}
+
+
 
 * {
     margin: 0;
@@ -50,8 +57,8 @@
     }
 
     .mesection {
-        height: 1100px;
-        background-color: #a8dadc;
+        height: 1200px;
+        background-color: #f1faee;
     }
 
     .lutLogo {
