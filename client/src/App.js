@@ -27,6 +27,8 @@ function App() {
 
   useEffect(() => {
     const trackScroll = () => {
+      console.log(`Window.scrollY: ${window.scrollY}`)
+      console.log(`Window.innerHeight: ${window.innerHeight}`)
       //Setting states when user on the first section
       if (window.scrollY >= 0 && window.scrollY <= window.innerHeight/2){
         setMeActive(true);
@@ -36,7 +38,7 @@ function App() {
         setMeActive(false);
         setContactActive(false);
         setProjectsActive(true);
-      } else {
+      } else if (contactRef.current.offsetTop - window.scrollY < window.innerHeight / 2){
         setMeActive(false);
         setContactActive(true);
         setProjectsActive(false);
