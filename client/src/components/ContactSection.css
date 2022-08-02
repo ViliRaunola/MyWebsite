@@ -114,3 +114,55 @@
 .error-message {
     color: red;
 }
+
+@media only screen and (max-width: 1000px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3em;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+
+  .form-input {
+    width: 100%;
+    min-width: unset;
+    padding: 1em;
+    background-color: #f1faee;
+  }
+
+  .form-input-message {
+    width: 100%;
+    min-width: unset;
+    padding: 1em;
+    min-height: 250px;
+    background-color: #f1faee;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: unset;
+  }
+
+  .info-item-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: unset;
+  }
+
+
+}

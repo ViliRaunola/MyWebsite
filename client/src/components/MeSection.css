@@ -64,4 +64,13 @@
     .lutLogo {
         order: 1;
     }
+
+    .fishing-image {
+        width: 95%;
+        clip-path: circle();
+    }
+
+    .ul-group{
+        padding-left: unset;
+    }
 }
