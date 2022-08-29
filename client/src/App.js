@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import MeSection from './components/MeSection'
+import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import { useRef, useEffect, useState } from 'react'
@@ -54,7 +55,8 @@ function App() {
     <div className='App'>
       <Navbar handelScroll={scrollToSection} meRef={meRef} projectsRef={projectsRef} contactRef={contactRef} meVisible={meActive} projectsVisible={projectsActive} contactVisible={contactActive}></Navbar>
       <MeSection reference={meRef}></MeSection>
-      <Section title={'My projects'} color={'#a8dadc'} reference={projectsRef} ></Section>
+      {/* <Section title={'My projects'} color={'#a8dadc'} reference={projectsRef} ></Section> */}
+      <ProjectsSection reference={projectsRef}></ProjectsSection>
       <ContactSection reference={contactRef}></ContactSection>
       <Footer handelScroll={scrollToSection} meRef={meRef} projectsRef={projectsRef} contactRef={contactRef}></Footer>
     </div>
