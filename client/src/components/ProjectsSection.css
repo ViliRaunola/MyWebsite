@@ -1,4 +1,51 @@
 .projects-section {
     height: 850px;
     background-color: #a8dadc;
+    padding-top: 0.3em;
+}
+
+
+.logo-image {
+    width: 250px;
+    padding-bottom: 0.1em;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2em;
+    gap: 2em
+}
+
+.project-small-view {
+    cursor: pointer;
+}
+
+
+
+.project-small-view:hover .logo-image {
+    animation-name: fade-img;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+
+
+@keyframes fade-img {
+    100% {
+        transform: scale(1.1)
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin-top: 2em;
+        gap: 2em
+      }
 }
