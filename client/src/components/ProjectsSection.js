@@ -3,11 +3,13 @@ import './ProjectsSection.css'
 import Popup from './Popup'
 import { useState, useEffect} from 'react'
 import pythonLogo from '../images/Python-Symbol.png'
+import androidStudioLogo from '../images/android.png'
 import CardItem from './CardItem'
 
 function Section({reference}) {
     const [buttonPopup, setButtonPopup] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenWikipedia, setIsOpenWikipedia] = useState(false);
+    const [isOpenJava, setIsOpenJava] = useState(false);
 
  
 
@@ -18,17 +20,18 @@ function Section({reference}) {
             <div className='projects-container'>
                 <CardItem 
                 src={pythonLogo}
-                text='Shortest path between two Wikipedia links'
-                label='Wikipedia'
-                setIsOpen={setIsOpen}
-                isOpen={isOpen}
+                text='Shortest path Wikipedia'
+                setIsOpen={setIsOpenWikipedia}
+                isOpen={isOpenWikipedia}
+                setOther={setIsOpenJava}
                 />
 
                 <CardItem 
-                src={pythonLogo}
-                text='Shortest path between two Wikipedia links'
-                label='Wikipedia'
-                setIsOpen={setIsOpen}
+                src={androidStudioLogo}
+                text='Android group project'
+                setIsOpen={setIsOpenJava}
+                isOpen={isOpenJava}
+                setOther={setIsOpenWikipedia}
                 />
                     
                 {/* <div className='project-small-view' onClick={ () => setButtonPopup(true)}>

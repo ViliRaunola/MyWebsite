@@ -6,7 +6,7 @@
 
 
 .logo-image {
-    width: 250px;
+    height: 160px;
     padding-bottom: 0.1em;
 }
 
@@ -23,10 +23,16 @@
 .card-project{
     background-color: #f1faee;
     padding: 3rem 5rem;
+    max-width: 40rem;
+    min-width: 25rem;
+}
+
+.card-project p {
+    line-height: 150%;
 }
 
 .card-expand {
-    width: 30rem;
+   width: 30rem;
 }
 
 
@@ -52,12 +58,35 @@
 }
 
 @media only screen and (max-width: 1000px) {
+    .projects-section {
+        height: 900px;
+        background-color: #a8dadc;
+        padding-top: 0.3em;
+    }
+
     .projects-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        align-items: center;
         margin-top: 2em;
         gap: 2em
       }
+
+      .card-project{
+        background-color: #f1faee;
+        padding: 3rem 5rem;
+        max-width: 20rem;
+        min-width: 15rem;
+    }
+
+    .card-expand {
+        width: 10rem;
+    }
+    
+    .logo-image {
+        width: 150px;
+        padding-bottom: 0.1em;
+    }
 }
