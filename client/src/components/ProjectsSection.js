@@ -7,6 +7,7 @@ import CardItem from './CardItem'
 
 function Section({reference}) {
     const [buttonPopup, setButtonPopup] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
  
 
@@ -19,14 +20,15 @@ function Section({reference}) {
                 src={pythonLogo}
                 text='Shortest path between two Wikipedia links'
                 label='Wikipedia'
-                setButtonPopup={setButtonPopup}
+                setIsOpen={setIsOpen}
+                isOpen={isOpen}
                 />
 
                 <CardItem 
                 src={pythonLogo}
                 text='Shortest path between two Wikipedia links'
                 label='Wikipedia'
-                setButtonPopup={setButtonPopup}
+                setIsOpen={setIsOpen}
                 />
                     
                 {/* <div className='project-small-view' onClick={ () => setButtonPopup(true)}>

@@ -15,21 +15,33 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    align-items: center;
     margin-top: 2em;
     gap: 2em
 }
 
-.project-small-view {
+.card-project{
+    background-color: #f1faee;
+    padding: 3rem 5rem;
+}
+
+.card-expand {
+    width: 30rem;
+}
+
+
+/* .card-div {
     cursor: pointer;
 }
 
 
 
-.project-small-view:hover .logo-image {
+.card-div:hover .logo-image {
     animation-name: fade-img;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-  }
+  } */
+
 
 
 
