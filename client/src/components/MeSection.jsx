@@ -4,10 +4,10 @@ import lutLogo from '../images/lut.svg'
 import fishingImage from '../images/IMG_1871.jpeg'
 
 function calculateDiffInYears(dateStart){
-  var timeNow = Date.now();
-  var timeDifMs = timeNow - dateStart;
-  var timeDate = new Date(timeDifMs);
-  var result = Math.abs(timeDate.getUTCFullYear()-1970);
+  let timeNow = Date.now();
+  let timeDifMs = timeNow - dateStart;
+  let timeDate = new Date(timeDifMs);
+  let result = Math.abs(timeDate.getUTCFullYear()-1970);
   return result; 
 }
 

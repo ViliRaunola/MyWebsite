@@ -1,7 +1,12 @@
 .projects-section {
-    height: 850px;
+    height: 100%;
     background-color: #a8dadc;
     padding-top: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 
@@ -12,21 +17,31 @@
 
 .projects-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    align-items: center;
-    margin-top: 2em;
-    gap: 2em
+    align-items: flex-start;
+    gap: 2em;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 .card-project{
     background-color: #f1faee;
     padding: 3rem 5rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 1.5em;
+    flex-basis: 30%;
+    margin-bottom: 1.5em;
 }
 
 .card-expand {
     width: 30rem;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 
@@ -53,11 +68,17 @@
 
 @media only screen and (max-width: 1000px) {
     .projects-container {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        margin-top: 2em;
-        gap: 2em
-      }
+        justify-content: unset;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .logo-image {
+        width: 150px;
+    }
+
+    .card-project {
+        max-width: 95%;
+    }
 }

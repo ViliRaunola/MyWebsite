@@ -74,7 +74,7 @@ function ContactSection({reference}) {
 
               <div className='contact-info-item'>
                 <GoDeviceMobile style={{margin: '0.2em', width: '20', height: '20'}}></GoDeviceMobile>
-                <h5 style={{margin: '0.2em'}}>044 5963259</h5>
+                <h5 style={{margin: '0.2em'}}>+358 44 5963259</h5>
               </div>
 
               <div className='contact-info-item'>
