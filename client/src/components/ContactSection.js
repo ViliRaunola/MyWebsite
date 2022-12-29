@@ -49,14 +49,13 @@ function ContactSection({reference}) {
 
   const sendEmail = (data, e) => {
     e.preventDefault();
-    emailjs.sendForm('service_fez7scn', 'template_o6oj5hk', e.target, '5dozwad2-CnWsYs6c')
+    emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE, process.env.REACT_APP_MAIL_TEMPLATE, e.target, process.env.REACT_APP_MAIL_KEY)
     .then((result) => {
-        console.log(result.text);
+        toast('Message has been sent!')
     }, (error) => {
         console.log(error.text);
     });
-    console.log('Message sent for me')
-    toast('Message has been sent!')
+    
     e.target.reset()
   }
 
