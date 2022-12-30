@@ -94,7 +94,7 @@ function ContactSection({reference}) {
                 
                 <div className='form-group'>
                   <label htmlFor='email'>Your email</label>
-                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern: /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/,required: true })}></input>
+                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern:  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,required: true })}></input>
                   {errors.email && <p className='error-message'>Email is needed!</p>}
                 </div>
 

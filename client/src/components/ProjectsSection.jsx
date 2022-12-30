@@ -10,7 +10,7 @@ function ProjectSection({reference}) {
     const [isDataintensiveOpen, setIsDataIntensiveOpen] = useState(false);
 
  
-
+    //TODO make the projects into an pbject from whitch to map them
     return (
         <div ref={reference} className='projects-section'>
             <h1>My Projects</h1>
