@@ -1,16 +1,23 @@
 import React from 'react'
 import './ProjectsSection.css'
-import Popup from './Popup'
 import { useState} from 'react'
 import pythonLogo from '../images/Python-Symbol.png'
+import reactLogo from '../images/React-icon.svg.png'
+import meanLogo from '../images/Mean+Stack.png'
+import mernLogo from '../images/MERN-logo.png'
+import cLogo from '../images/C_Logo.png'
+import dataintensiveLogo from '../images/3044854.png'
 import ProjectCard from './ProjectCard'
+
 
 function ProjectSection({reference}) {
     const [isWikipediaOpen, setIsWikipediaOpen] = useState(false);
     const [isDataintensiveOpen, setIsDataIntensiveOpen] = useState(false);
+    const [isReactOpen, setIsReactOpen] = useState(false);
+    const [isKandiOpen, setIsKandiOpen] = useState(false);
+    const [isMeanOpen, setIsMeanOpen] = useState(false);
+    const [isCOpen, setIsCOpen] = useState(false);
 
- 
-    //TODO make the projects into an pbject from whitch to map them
     return (
         <div ref={reference} className='projects-section'>
             <h1>My Projects</h1>
@@ -28,7 +35,7 @@ function ProjectSection({reference}) {
                 />
 
                 <ProjectCard 
-                src={pythonLogo}
+                src={dataintensiveLogo}
                 text='Book store using distributed databases'
                 label='Distributed databases'
                 description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -40,36 +47,49 @@ function ProjectSection({reference}) {
 
                 <ProjectCard 
                 src={pythonLogo}
-                text='Book store using distributed databases'
-                label='Distributed databases'
+                text='Detecting nearby Wlan and Bluetooth devices using Raspberry Pi'
+                label="Bachelor's theses"
                 description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Aut distinctio ducimus saepe iure mollitia 
                 facilis consectetur quae et corporis voluptate.'
-                setIsOpen={setIsDataIntensiveOpen}
-                isOpen={isDataintensiveOpen}
+                setIsOpen={setIsKandiOpen}
+                isOpen={isKandiOpen}
                 />  
 
                 <ProjectCard 
-                src={pythonLogo}
-                text='Book store using distributed databases'
-                label='Distributed databases'
+                src={mernLogo}
+                text='Web page that allows users to create, comment and vote on posts'
+                label='Forum web page'
                 description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Aut distinctio ducimus saepe iure mollitia 
                 facilis consectetur quae et corporis voluptate.'
-                setIsOpen={setIsDataIntensiveOpen}
-                isOpen={isDataintensiveOpen}
+                setIsOpen={setIsReactOpen}
+                isOpen={isReactOpen}
                 />  
 
-                {/* <div className='project-small-view' onClick={ () => setButtonPopup(true)}>
-                    <img src={pythonLogo} alt='Python Logo' className='logo-image'/>
-                    <h4>Shortest path between Wikipedia links</h4>
-                </div> */}
-              
-            </div>
+                <ProjectCard 
+                src={meanLogo}
+                text='Web page for sending private message between users'
+                label='Message web page'
+                description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Aut distinctio ducimus saepe iure mollitia 
+                facilis consectetur quae et corporis voluptate.'
+                setIsOpen={setIsMeanOpen}
+                isOpen={isMeanOpen}
+                />  
 
-            {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <h2>My popup</h2>
-            </Popup> */}
+                <ProjectCard 
+                src={cLogo}
+                text='Joku terminaali baso'
+                label='Message web page'
+                description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Aut distinctio ducimus saepe iure mollitia 
+                facilis consectetur quae et corporis voluptate.'
+                setIsOpen={setIsCOpen}
+                isOpen={isCOpen}
+                /> 
+        
+            </div>
         </div>
     )
 }

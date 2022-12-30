@@ -1,18 +1,19 @@
 .projects-section {
-    height: 100%;
+    min-height: 950px;
+    max-height: 100%;
     background-color: #a8dadc;
     padding-top: 0.3em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center;  */
     align-content: center;
     align-items: center;
 }
 
 
 .logo-image {
-    width: 250px;
-    padding-bottom: 0.1em;
+    height: 150px;
+    padding-bottom: 0.5em;
 }
 
 .projects-container {
@@ -23,7 +24,7 @@
     align-content: center;
     align-items: flex-start;
     gap: 2em;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100%;
     width: 100%;
 }
@@ -35,7 +36,7 @@
     max-height: 100%;
     margin-top: 1.5em;
     flex-basis: 30%;
-    margin-bottom: 1.5em;
+    margin-bottom: 3em;
 }
 
 .card-expand {
@@ -68,6 +69,7 @@
 
 @media only screen and (max-width: 1000px) {
     .projects-container {
+        min-height: 2300px;
         flex-direction: column;
         justify-content: unset;
         align-items: center;
@@ -75,7 +77,7 @@
     }
 
     .logo-image {
-        width: 150px;
+        height: 90px;
     }
 
     .card-project {

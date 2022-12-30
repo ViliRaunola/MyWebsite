@@ -100,7 +100,7 @@ function ContactSection({reference}) {
 
                 <div className='form-group'>
                   <label htmlFor='text'>Your message</label>
-                  <textarea className='form-input-message' type='text' id='text' name='message' {...register("message", { required: true })}></textarea>
+                  <textarea className='form-input-message' type='text' id='message' name='message' {...register("message", { required: true })}></textarea>
                   {errors.message && <p className='error-message'>Message is needed!</p>}
                 </div>
 
