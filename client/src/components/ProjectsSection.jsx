@@ -17,6 +17,7 @@ function ProjectSection({reference}) {
     const [isKandiOpen, setIsKandiOpen] = useState(false);
     const [isMeanOpen, setIsMeanOpen] = useState(false);
     const [isCOpen, setIsCOpen] = useState(false);
+    const [isMyPageOpen, setIsMyPageOpen] = useState(false);
 
     return (
         <div ref={reference} className='projects-section'>
@@ -87,6 +88,17 @@ function ProjectSection({reference}) {
                 facilis consectetur quae et corporis voluptate.'
                 setIsOpen={setIsCOpen}
                 isOpen={isCOpen}
+                /> 
+
+                <ProjectCard 
+                src={reactLogo}
+                text='Home web page'
+                label='Home web page'
+                description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Aut distinctio ducimus saepe iure mollitia 
+                facilis consectetur quae et corporis voluptate.'
+                setIsOpen={setIsMyPageOpen}
+                isOpen={isMyPageOpen}
                 /> 
         
             </div>
