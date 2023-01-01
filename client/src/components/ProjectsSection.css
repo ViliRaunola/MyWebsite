@@ -1,5 +1,5 @@
 .projects-section {
-    min-height: 1050px;
+    min-height: 1150px;
     max-height: 100%;
     background-color: #a8dadc;
     padding-top: 0.3em;
@@ -26,14 +26,14 @@
     gap: 2em;
     overflow: hidden;
     height: 100%;
-    min-height: 990px;
+    min-height: 1275px;
     width: 100%;
 }
 
 .card-project{
     background-color: #f1faee;
     padding: 3rem 5rem;
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
     min-height: 300px;
     margin-top: 1.5em;
@@ -60,7 +60,31 @@
     animation-fill-mode: forwards;
   } */
 
+a {
+    background: linear-gradient(0deg,  #457b9d,  #457b9d) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+    line-height: 1;
+    
+}
+a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
 
+.underline_link {
+    padding-bottom: 2px;
+    --bg-h: 2px;
+    text-decoration: none;
+    color: #e63946;
+}
+
+a:hover {
+    color:   #457b9d !important;
+}
+a:visited {
+    color:#F8C9CD;
+}
 
 
 @keyframes fade-img {
@@ -83,7 +107,7 @@
     }
 
     .card-project {
-        max-width: 95%;
+        width: 95%;
         min-height: 150px;
     }
 }

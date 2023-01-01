@@ -7,6 +7,7 @@ import meanLogo from '../images/Mean+Stack.png'
 import mernLogo from '../images/MERN-logo.png'
 import cLogo from '../images/C_Logo.png'
 import dataintensiveLogo from '../images/3044854.png'
+import androidLogo from '../images/android.png'
 import ProjectCard from './ProjectCard'
 
 
@@ -18,6 +19,7 @@ function ProjectSection({reference}) {
     const [isMeanOpen, setIsMeanOpen] = useState(false);
     const [isCOpen, setIsCOpen] = useState(false);
     const [isMyPageOpen, setIsMyPageOpen] = useState(false);
+    const [isAndroidOpen, setIsAndroidOpen] = useState(false);
 
     return (
         <div ref={reference} className='projects-section'>
@@ -33,6 +35,7 @@ function ProjectSection({reference}) {
                 facilis consectetur quae et corporis voluptate.'
                 setIsOpen={setIsWikipediaOpen}
                 isOpen={isWikipediaOpen}
+                repository='https://github.com/ViliRaunola/DistributedFinalProject'
                 />
 
                 <ProjectCard 
@@ -99,6 +102,17 @@ function ProjectSection({reference}) {
                 facilis consectetur quae et corporis voluptate.'
                 setIsOpen={setIsMyPageOpen}
                 isOpen={isMyPageOpen}
+                /> 
+
+                <ProjectCard 
+                src={androidLogo}
+                text='Restaurant review application'
+                label='Android application'
+                description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Aut distinctio ducimus saepe iure mollitia 
+                facilis consectetur quae et corporis voluptate.'
+                setIsOpen={setIsAndroidOpen}
+                isOpen={isAndroidOpen}
                 /> 
         
             </div>

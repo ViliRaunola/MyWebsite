@@ -5,6 +5,11 @@ import './ProjectsSection.css'
 // onClick={ () => props.setButtonPopup(true)}
 
 function ProjectCard(props) {
+
+  const handleLinkClick = (e) => {
+    e.stopPropagation()
+  }
+
   return (
     <>
         <motion.div transition={{layout: {duration: 1, type: 'spring'}}} style={{borderRadius: '1rem', boxShadow: '0px 10px 30px rgba(0,0,0 0.5)'}} layout className="card-project" onClick={ () => props.setIsOpen(!props.isOpen)}>
@@ -15,7 +20,7 @@ function ProjectCard(props) {
             {props.isOpen && (
             <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} className='card-expand'>
               <p>{props.description}</p>
-
+              <a class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.repository} target='_blank' rel="noreferrer">Source code</a>
             </motion.div>
             )}
 
