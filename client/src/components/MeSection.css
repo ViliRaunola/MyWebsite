@@ -6,8 +6,9 @@
 
 .ul-group {
     list-style-type: none;
-    place-self: 'center';
+    text-align:center;
     padding: 0;
+    margin: 0;
 }
 
 .card-div{
@@ -15,7 +16,6 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-  
     gap: 3em;
     grid-auto-flow: column;
 }
@@ -27,14 +27,22 @@
     padding-top: 2.5em;
 }
 
-
-
 * {
     margin: 0;
 }
 
 .li-item-me-section {
     padding: 0.3em;
+}
+
+.li-item-me-section-before-nest {
+    padding: 0.3em;
+    padding-bottom: 0em;
+}
+
+.li-item-me-section-inside-nest {
+    padding: 0.3em;
+    padding-left: 1em;
 }
 
 

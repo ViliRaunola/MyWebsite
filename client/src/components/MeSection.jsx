@@ -44,9 +44,8 @@ function Section({reference}) {
             <ul className='ul-group'>
               <li className='li-item-me-section'>Started in LUT 2019</li>
               <li className='li-item-me-section'>Currently in my {addingSuffixToYear(diffInYears)} year</li>
-              <li className='li-item-me-section'>Major in Software Engineering</li>
-              <li className='li-item-me-section'>Minor in Data Analytics</li>
-              <li className='li-item-me-section'>Bachelor's Degree Completed</li>
+              <li className='li-item-me-section'>Bachelor's Degree, completed: Software Engineering, Data Analytics </li>
+              <li className='li-item-me-section'>Master's Degree, underway: Software Engineering, Embedded Systems and Communications</li>
             </ul>
           </div>
 

@@ -60,6 +60,7 @@ function ContactSection({reference}) {
   }
 
 
+    // TODO Add Link for Github, Bitbucket and LinkedIn
     return (
       <div ref={reference} className='contactsection'>
           <h1>Contact Me</h1>
