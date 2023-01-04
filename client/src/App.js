@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Section from './components/Section';
 import MeSection from './components/MeSection'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection';

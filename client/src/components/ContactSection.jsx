@@ -1,9 +1,8 @@
 import React from 'react'
 import './ContactSection.css'
-import {GoLocation, GoDeviceMobile, GoMail, GoMarkGithub} from 'react-icons/go'
+import {GoMarkGithub} from 'react-icons/go'
 import { IoLogoLinkedin } from "react-icons/io";
 import emailjs from '@emailjs/browser';
-import { useState, useEffect } from 'react';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form";
@@ -12,7 +11,7 @@ toast.configure()
 
 function ContactSection({reference}) {
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   // const initialValues = {name: "", email: "", message: ""};
   // const [formValues, setFormValues] = useState(initialValues);
@@ -78,7 +77,7 @@ function ContactSection({reference}) {
 
               <div className='contact-info-item'>
                 <IoLogoLinkedin style={{margin: '0.2em', width: '20', height: '20'}}></IoLogoLinkedin>
-                <a className='underline_link' style={{ color:'black'}} href='#' target='_blank' rel="noreferrer">
+                <a className='underline_link' style={{ color:'black'}} href='.' target='_blank' rel="noreferrer">
                   <h5 style={{margin: '0.2em'}}>
                     LinkedIn
                   </h5>
@@ -96,7 +95,7 @@ function ContactSection({reference}) {
                 
                 <div className='form-group'>
                   <label htmlFor='email'>Your email</label>
-                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern:  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,required: true })}></input>
+                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern:  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,required: true })}></input>
                   {errors.email && <p className='error-message'>Email is needed!</p>}
                 </div>
 
