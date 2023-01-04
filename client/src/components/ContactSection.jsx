@@ -1,6 +1,7 @@
 import React from 'react'
 import './ContactSection.css'
-import {GoLocation, GoDeviceMobile, GoMail} from 'react-icons/go'
+import {GoLocation, GoDeviceMobile, GoMail, GoMarkGithub} from 'react-icons/go'
+import { IoLogoLinkedin } from "react-icons/io";
 import emailjs from '@emailjs/browser';
 import { useState, useEffect } from 'react';
 import {toast} from 'react-toastify'
@@ -59,30 +60,30 @@ function ContactSection({reference}) {
     e.target.reset()
   }
 
-
-    // TODO Add Link for Github, Bitbucket and LinkedIn
     return (
       <div ref={reference} className='contactsection'>
-          <h1>Contact Me</h1>
+          <h1 style={{paddingTop: '0.3em'}}>Contact Me</h1>
 
           <div className='contact-container'>
             <div className='info-item-container'>
 
               <div className='contact-info-item'>
-                <GoLocation style={{margin: '0.2em', width: '20', height: '20'}}></GoLocation>
-                <h5 style={{margin: '0.2em'}}>Lappeenranta</h5>
+                <GoMarkGithub style={{margin: '0.2em', width: '20', height: '20'}}></GoMarkGithub>
+                <a className='underline_link' style={{ color:'black'}} href='https://github.com/ViliRaunola' target='_blank' rel="noreferrer">
+                  <h5 style={{margin: '0.2em'}}>
+                    GitHub
+                  </h5>
+                </a>
               </div>
 
               <div className='contact-info-item'>
-                <GoDeviceMobile style={{margin: '0.2em', width: '20', height: '20'}}></GoDeviceMobile>
-                <h5 style={{margin: '0.2em'}}>+358 44 5963259</h5>
+                <IoLogoLinkedin style={{margin: '0.2em', width: '20', height: '20'}}></IoLogoLinkedin>
+                <a className='underline_link' style={{ color:'black'}} href='#' target='_blank' rel="noreferrer">
+                  <h5 style={{margin: '0.2em'}}>
+                    LinkedIn
+                  </h5>
+                </a>
               </div>
-
-              <div className='contact-info-item'>
-                <GoMail style={{margin: '0.2em', width: '20', height: '20'}}></GoMail>
-                <h5 style={{margin: '0.2em'}}>raunolavili@gmail.com</h5>
-              </div>
-
             </div>
 
             <div className='form-container'>

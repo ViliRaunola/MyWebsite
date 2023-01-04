@@ -58,8 +58,7 @@ function Section({reference}) {
               <h4>Freetime</h4>
               <ul className='ul-group'>
                 <li className='li-item-me-section'>Trying my skills on own coding projects</li>
-                <li className='li-item-me-section'>Avid FPS gamer: Valorant & CS:GO</li>
-                <li className='li-item-me-section'>Love to spend my time in nature especially with fishing and discgolfing</li>
+                <li className='li-item-me-section'>Love to spend my time in nature especially with fishing, discgolfing and cross country skiing</li>
                 <li className='li-item-me-section'>All year bike commuter</li>
               </ul>
             </div>

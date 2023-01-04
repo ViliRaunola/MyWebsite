@@ -25,7 +25,7 @@ function ProjectCard(props) {
                 <a class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.repository} target='_blank' rel="noreferrer">Source code</a>
                 
                 {props.demoVideoLink && (
-                  <a style={{marginLeft: '2em'}} class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.demoVideoLink} target='_blank' rel="noreferrer">Demonstration video</a>
+                  <a style={{}} class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.demoVideoLink} target='_blank' rel="noreferrer">Demonstration video</a>
                 )}
               </div>
             </motion.div>

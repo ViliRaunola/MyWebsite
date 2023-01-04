@@ -18,10 +18,12 @@
     align-items: center;
     gap: 3em;
     grid-auto-flow: column;
+    width: 100%;
 }
 
 .card-seperator{
-    width: 50%;
+    max-width: 50%;
+    min-width: 650px;
     margin: 0 auto;
     border-bottom: 1px solid grey;
     padding-top: 2.5em;
@@ -81,5 +83,9 @@
 
     .ul-group{
         padding-left: unset;
+    }
+
+    .card-seperator {
+        min-width: revert;
     }
 }

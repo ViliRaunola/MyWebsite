@@ -24,8 +24,8 @@ function ProjectSection({reference}) {
 
     return (
         <div ref={reference} className='projects-section'>
-            <h1>My Projects</h1>
-            <p>Here are some of my school/ personal projects during my time university</p>
+            <h1 style={{paddingTop: '0.3em'}}>My Projects</h1>
+            <p style={{fontSize: '1.1em', width:'95%'}}>Here are some of my school and personal projects during my time university</p>
             <div className='projects-container'>
 
                 <ProjectCard 
@@ -43,10 +43,10 @@ function ProjectSection({reference}) {
 
                 <ProjectCard 
                 src={dataintensiveLogo}
-                text='Web store utilizing a distributed database'
+                text='Online store utilizing a distributed database'
                 label='Distributed database'
-                description="A web store that was done using SERN-stack. 
-                The web store's database is designed to be country specific. 
+                description="An online store that was done using SERN-stack. 
+                The online store's database is designed to be country specific. 
                 This means that each supported county has their own selection but the user profiles are shared between the countries. "
                 setIsOpen={setIsDataIntensiveOpen}
                 isOpen={isDataintensiveOpen}
@@ -69,9 +69,9 @@ function ProjectSection({reference}) {
 
                 <ProjectCard 
                 src={mernLogo}
-                text='Web page that allows users to create, comment and vote on posts'
-                label='Forum web page'
-                description="A web page done using the MERN-stack. Users can register to the site. 
+                text='Webpage that allows users to create, comment and vote on posts'
+                label='Forum webpage'
+                description="A webpage done using the MERN-stack. Users can register to the site. 
                 After registration users can vote, comment and create their own posts. 
                 The front-end uses the MUI library for the components such as the navbar. 
                 More detailed documentation can be found in the repository."
@@ -82,8 +82,8 @@ function ProjectSection({reference}) {
 
                 <ProjectCard 
                 src={meanLogo}
-                text='Web page for sending private message between users'
-                label='Message web page'
+                text='Webpage for sending private message between users'
+                label='Message webpage'
                 description='A messaging website done using the MEAN-stack. 
                 Registered users can take part in a global chat or send private messages to other users. 
                 A demonstration video of the site is included in the repository.'
@@ -107,8 +107,8 @@ function ProjectSection({reference}) {
 
                 <ProjectCard 
                 src={reactLogo}
-                text='Home web page'
-                label='Home web page'
+                text='Home webpage'
+                label='Home webpage'
                 description='The site you are looking at now. 
                 The project was created in order to play around and learn new things in React, CSS 
                 and try out alternative deployment services after Heroku cancelled the free services. 
@@ -134,7 +134,7 @@ function ProjectSection({reference}) {
                 src={pythonLogo}
                 text='A simple price checking program'
                 label='Price check'
-                description="A web scraping program that retrieves the price of a product from a web page. 
+                description="A web scraping program that retrieves the price of a product from a webpage. 
                 Users can specify the product's price when they want the alarm to go off."
                 setIsOpen={setIsPriceCheckOpen}
                 isOpen={isPriceCheckOpen}
