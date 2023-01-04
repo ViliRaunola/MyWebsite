@@ -14,8 +14,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 app.use(express.static(path.resolve("..", "client", "build"))); //Telling the server where to find the front end files to serve
 app.get("*", (req, res) => {
