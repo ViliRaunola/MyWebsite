@@ -20,6 +20,7 @@ function ProjectSection({reference}) {
     const [isCOpen, setIsCOpen] = useState(false);
     const [isMyPageOpen, setIsMyPageOpen] = useState(false);
     const [isAndroidOpen, setIsAndroidOpen] = useState(false);
+    const [isPriceCheckOpen, setIsPriceCheckOpen] = useState(false);
 
     return (
         <div ref={reference} className='projects-section'>
@@ -37,6 +38,7 @@ function ProjectSection({reference}) {
                 setIsOpen={setIsWikipediaOpen}
                 isOpen={isWikipediaOpen}
                 repository='https://github.com/ViliRaunola/DistributedFinalProject'
+                demoVideoLink='https://youtu.be/BWgY070F2Z8'
                 />
 
                 <ProjectCard 
@@ -44,11 +46,12 @@ function ProjectSection({reference}) {
                 text='Web store utilizing a distributed database'
                 label='Distributed database'
                 description="A web store that was done using SERN-stack. 
-                The web store's database is designed to be country spesific. 
+                The web store's database is designed to be country specific. 
                 This means that each supported county has their own selection but the user profiles are shared between the countries. "
                 setIsOpen={setIsDataIntensiveOpen}
                 isOpen={isDataintensiveOpen}
                 repository='https://github.com/AlmondRumble11/DataIntensiveProjectApp'
+                demoVideoLink='https://youtu.be/iDcYlj8GF2w'
                 />
 
                 <ProjectCard 
@@ -56,9 +59,9 @@ function ProjectSection({reference}) {
                 text='Detecting nearby Wlan and Bluetooth devices using Raspberry Pi'
                 label="Bachelor's theses"
                 description="This project was done as a bachelor's thesis.
-                It uses Raspberry Pi to detect closeby WLAN and Bluetooth signals and identifies the devices using their MAC-address. 
-                The data from the discovered devices can be stored locally to the Raspberry or to be sent to a Mongo database in the web.
-                A visualisation web site was also done that uses the Mongo database to display the data in a user friendly matter."
+                It uses Raspberry Pi to detect closeby WLAN and Bluetooth signals and identifies the devices using their MAC address. 
+                The data from the discovered devices can be stored locally to the Raspberry or to be sent to a Mongo database on the web.
+                A visualisation website was also done that uses the Mongo database to display the data in a user-friendly matter."
                 setIsOpen={setIsKandiOpen}
                 isOpen={isKandiOpen}
                 repository='https://github.com/ViliRaunola/Kandi-Raspberry'
@@ -81,39 +84,61 @@ function ProjectSection({reference}) {
                 src={meanLogo}
                 text='Web page for sending private message between users'
                 label='Message web page'
-                description='A messaging web site done using the MEAN-stack. 
+                description='A messaging website done using the MEAN-stack. 
                 Registered users can take part in a global chat or send private messages to other users. 
                 A demonstration video of the site is included in the repository.'
                 setIsOpen={setIsMeanOpen}
                 isOpen={isMeanOpen}
                 repository='https://bitbucket.org/ViliVilperi/exercises/src/main/myproject/'
+                demoVideoLink='https://youtu.be/MIu8OPuEB0w'
                 />  
 
                 <ProjectCard 
                 src={cLogo}
-                text='Joku terminaali baso'
-                label='Message web page'
-                description=''
+                text='System programming' 
+                label='Systen programming'
+                description='Final project assignment for operating systems and system programming course. 
+                The assignment includes multiple c-programs the main one being a UNIX shell called wish.c. 
+                It can run built-in programs or it can create a new thread to execute the command with the given arguments.'
                 setIsOpen={setIsCOpen}
                 isOpen={isCOpen}
+                repository='https://github.com/ViliRaunola/Kayttojarjestelmat_Harjoitustyoprojekti_Palautus'
                 /> 
 
                 <ProjectCard 
                 src={reactLogo}
                 text='Home web page'
                 label='Home web page'
-                description=''
+                description='The site you are looking at now. 
+                The project was created in order to play around and learn new things in React, CSS 
+                and try out alternative deployment services after Heroku cancelled the free services. 
+                This project is under constant development and new ideas are appreciated. '
                 setIsOpen={setIsMyPageOpen}
                 isOpen={isMyPageOpen}
+                repository='https://github.com/ViliRaunola/MyWebsite'
                 /> 
 
                 <ProjectCard 
                 src={androidLogo}
                 text='Restaurant review application'
                 label='Android application'
-                description=''
+                description="An android application for users to see restaurants' daily menus, review the dishes, and see other users' reviews. 
+                This application was done using Android studio for the object-oriented course as a final project."
                 setIsOpen={setIsAndroidOpen}
                 isOpen={isAndroidOpen}
+                repository='https://github.com/ViliRaunola/Finalproject'
+                demoVideoLink='https://www.youtube.com/watch?v=I2ov3GUtUEs'
+                /> 
+
+                <ProjectCard 
+                src={pythonLogo}
+                text='A simple price checking program'
+                label='Price check'
+                description="A web scraping program that retrieves the price of a product from a web page. 
+                Users can specify the product's price when they want the alarm to go off."
+                setIsOpen={setIsPriceCheckOpen}
+                isOpen={isPriceCheckOpen}
+                repository='https://github.com/ViliRaunola/Hinnan_Tarkistaja'
                 /> 
         
             </div>

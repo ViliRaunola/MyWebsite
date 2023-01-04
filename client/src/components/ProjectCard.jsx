@@ -20,7 +20,14 @@ function ProjectCard(props) {
             {props.isOpen && (
             <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}} className='card-expand'>
               <p>{props.description}</p>
-              <a class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.repository} target='_blank' rel="noreferrer">Source code</a>
+              <div className='links-div'>
+                
+                <a class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.repository} target='_blank' rel="noreferrer">Source code</a>
+                
+                {props.demoVideoLink && (
+                  <a style={{marginLeft: '2em'}} class='underline_link' onClick={(e) => handleLinkClick(e)} href={props.demoVideoLink} target='_blank' rel="noreferrer">Demonstration video</a>
+                )}
+              </div>
             </motion.div>
             )}
 
