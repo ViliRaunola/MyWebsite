@@ -74,10 +74,10 @@ function ContactSection({reference}) {
                   </h5>
                 </a>
               </div>
-
+              {/* www.linkedin.com/in/vili-raunola-614920260 */}
               <div className='contact-info-item'>
                 <IoLogoLinkedin style={{margin: '0.2em', width: '20', height: '20'}}></IoLogoLinkedin>
-                <a className='underline_link' style={{ color:'black'}} href='.' target='_blank' rel="noreferrer">
+                <a className='underline_link' style={{ color:'black'}} href='https://www.linkedin.com/in/vili-raunola-614920260/' target='_blank' rel="noreferrer">
                   <h5 style={{margin: '0.2em'}}>
                     LinkedIn
                   </h5>
