@@ -1,54 +1,95 @@
 .projects-section {
-    height: 850px;
+    max-height: 100%;
     background-color: #a8dadc;
-    padding-top: 0.3em;
+    /* padding-top: 0.3em; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 
 .logo-image {
-    height: 160px;
-    padding-bottom: 0.1em;
+    height: 150px;
+    padding-bottom: 0.5em;
 }
 
 .projects-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-top: 2em;
-    gap: 2em
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 2em;
+    overflow: hidden;
+    height: 100%;
+    min-height: 1275px;
+    width: 100%;
+    margin-bottom: 4em;
 }
 
 .card-project{
     background-color: #f1faee;
     padding: 3rem 5rem;
-    max-width: 40rem;
-    min-width: 25rem;
-}
-
-.card-project p {
-    line-height: 150%;
-}
-
-.card-expand {
-   width: 30rem;
-}
-
-
-/* .card-div {
+    width: 100%;
+    max-height: 100%;
+    min-height: 300px;
+    margin-top: 1.5em;
+    flex-basis: 30%;
+    margin-bottom: 3em;
     cursor: pointer;
 }
 
+.card-expand {
+    width: 30rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.links-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; 
+    margin-top: 1em;
+}
 
 
-.card-div:hover .logo-image {
+
+/* .card-div:hover .logo-image {
     animation-name: fade-img;
     animation-duration: 1s;
     animation-fill-mode: forwards;
   } */
 
+a {
+    background: linear-gradient(0deg,  #457b9d,  #457b9d) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+    line-height: 1;
+    
+}
+a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
 
+.underline_link {
+    padding-bottom: 2px;
+    --bg-h: 2px;
+    text-decoration: none;
+    color: #e63946;
+}
+
+
+a:hover {
+    color:   #457b9d !important;
+}
+a:visited {
+    color:#F8C9CD;
+}
 
 
 @keyframes fade-img {
@@ -65,28 +106,33 @@
     }
 
     .projects-container {
-        display: flex;
+        min-height: 2300px;
         flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        justify-content: unset;
         align-items: center;
-        margin-top: 2em;
-        gap: 2em
-      }
-
-      .card-project{
-        background-color: #f1faee;
-        padding: 3rem 5rem;
-        max-width: 20rem;
-        min-width: 15rem;
+        flex-wrap: nowrap;
     }
 
-    .card-expand {
-        width: 10rem;
-    }
-    
     .logo-image {
-        width: 150px;
-        padding-bottom: 0.1em;
+        height: 90px;
     }
+
+    .card-project {
+        width: 95%;
+        min-height: 150px;
+    }
+
+    .links-div {
+        flex-direction: column;
+    }
+
+    .underline_link {
+        margin-left: 0em;
+        margin-top: 0.5em;
+    }
+
+    .links-div {
+        gap: 0em;
+    }
+
 }

@@ -9,8 +9,7 @@ function Footer({handelScroll, meRef, projectsRef, contactRef}) {
             <li onClick={() => handelScroll(projectsRef)} className='linkFooter'>My projects</li>
             <li onClick={() => handelScroll(contactRef)} className='linkFooter'>Contact Me</li>
         </ul>   
-        <p className='textFooter' >© 2022 Vili Raunola</p>
-        <p style={{margin: 0, color: 'black'}}>raunolavili@gmail.com</p>
+        <p className='textFooter' >© 2023 Vili Raunola</p>
     </div>
   )
 }

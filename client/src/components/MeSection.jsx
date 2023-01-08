@@ -4,10 +4,10 @@ import lutLogo from '../images/lut.svg'
 import fishingImage from '../images/IMG_1871.jpeg'
 
 function calculateDiffInYears(dateStart){
-  var timeNow = Date.now();
-  var timeDifMs = timeNow - dateStart;
-  var timeDate = new Date(timeDifMs);
-  var result = Math.abs(timeDate.getUTCFullYear()-1970);
+  let timeNow = Date.now();
+  let timeDifMs = timeNow - dateStart;
+  let timeDate = new Date(timeDifMs);
+  let result = Math.abs(timeDate.getUTCFullYear()-1970);
   return result; 
 }
 
@@ -44,9 +44,8 @@ function Section({reference}) {
             <ul className='ul-group'>
               <li className='li-item-me-section'>Started in LUT 2019</li>
               <li className='li-item-me-section'>Currently in my {addingSuffixToYear(diffInYears)} year</li>
-              <li className='li-item-me-section'>Major in Software Engineering</li>
-              <li className='li-item-me-section'>Minor in Data Analytics</li>
-              <li className='li-item-me-section'>Bachelor's Degree Completed</li>
+              <li className='li-item-me-section'>Bachelor's Degree, completed: Software Engineering, Data Analytics </li>
+              <li className='li-item-me-section'>Master's Degree, underway: Software Engineering, Embedded Systems and Communications</li>
             </ul>
           </div>
 
@@ -59,8 +58,7 @@ function Section({reference}) {
               <h4>Freetime</h4>
               <ul className='ul-group'>
                 <li className='li-item-me-section'>Trying my skills on own coding projects</li>
-                <li className='li-item-me-section'>Avid FPS gamer: Valorant & CS:GO</li>
-                <li className='li-item-me-section'>Love to spend my time in nature especially with fishing and discgolfing</li>
+                <li className='li-item-me-section'>Love to spend my time in nature especially with fishing, discgolfing and cross country skiing</li>
                 <li className='li-item-me-section'>All year bike commuter</li>
               </ul>
             </div>

@@ -1,8 +1,8 @@
 import React from 'react'
 import './ContactSection.css'
-import {GoLocation, GoDeviceMobile, GoMail} from 'react-icons/go'
+import {GoMarkGithub} from 'react-icons/go'
+import { IoLogoLinkedin } from "react-icons/io";
 import emailjs from '@emailjs/browser';
-import { useState, useEffect } from 'react';
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form";
@@ -11,7 +11,7 @@ toast.configure()
 
 function ContactSection({reference}) {
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   // const initialValues = {name: "", email: "", message: ""};
   // const [formValues, setFormValues] = useState(initialValues);
@@ -49,40 +49,40 @@ function ContactSection({reference}) {
 
   const sendEmail = (data, e) => {
     e.preventDefault();
-    emailjs.sendForm('service_fez7scn', 'template_o6oj5hk', e.target, '5dozwad2-CnWsYs6c')
+    emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE, process.env.REACT_APP_MAIL_TEMPLATE, e.target, process.env.REACT_APP_MAIL_KEY)
     .then((result) => {
-        console.log(result.text);
+        toast('Message has been sent!')
     }, (error) => {
         console.log(error.text);
     });
-    console.log('Message sent for me')
-    toast('Message has been sent!')
+    
     e.target.reset()
   }
 
-
     return (
       <div ref={reference} className='contactsection'>
-          <h1>Contact Me</h1>
+          <h1 style={{paddingTop: '0.3em'}}>Contact Me</h1>
 
           <div className='contact-container'>
             <div className='info-item-container'>
 
               <div className='contact-info-item'>
-                <GoLocation style={{margin: '0.2em', width: '20', height: '20'}}></GoLocation>
-                <h5 style={{margin: '0.2em'}}>Lappeenranta</h5>
+                <GoMarkGithub style={{margin: '0.2em', width: '20', height: '20'}}></GoMarkGithub>
+                <a className='underline_link' style={{ color:'black'}} href='https://github.com/ViliRaunola' target='_blank' rel="noreferrer">
+                  <h5 style={{margin: '0.2em'}}>
+                    GitHub
+                  </h5>
+                </a>
               </div>
 
               <div className='contact-info-item'>
-                <GoDeviceMobile style={{margin: '0.2em', width: '20', height: '20'}}></GoDeviceMobile>
-                <h5 style={{margin: '0.2em'}}>044 5963259</h5>
+                <IoLogoLinkedin style={{margin: '0.2em', width: '20', height: '20'}}></IoLogoLinkedin>
+                <a className='underline_link' style={{ color:'black'}} href='.' target='_blank' rel="noreferrer">
+                  <h5 style={{margin: '0.2em'}}>
+                    LinkedIn
+                  </h5>
+                </a>
               </div>
-
-              <div className='contact-info-item'>
-                <GoMail style={{margin: '0.2em', width: '20', height: '20'}}></GoMail>
-                <h5 style={{margin: '0.2em'}}>raunolavili@gmail.com</h5>
-              </div>
-
             </div>
 
             <div className='form-container'>
@@ -95,13 +95,13 @@ function ContactSection({reference}) {
                 
                 <div className='form-group'>
                   <label htmlFor='email'>Your email</label>
-                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern: /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/,required: true })}></input>
+                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern:  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,required: true })}></input>
                   {errors.email && <p className='error-message'>Email is needed!</p>}
                 </div>
 
                 <div className='form-group'>
                   <label htmlFor='text'>Your message</label>
-                  <textarea className='form-input-message' type='text' id='text' name='message' {...register("message", { required: true })}></textarea>
+                  <textarea className='form-input-message' type='text' id='message' name='message' {...register("message", { required: true })}></textarea>
                   {errors.message && <p className='error-message'>Message is needed!</p>}
                 </div>
 
