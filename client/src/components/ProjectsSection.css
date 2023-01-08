@@ -26,6 +26,7 @@
     height: 100%;
     min-height: 1275px;
     width: 100%;
+    max-width: 3000px;
     margin-bottom: 4em;
 }
 
@@ -39,12 +40,22 @@
     flex-basis: 30%;
     margin-bottom: 3em;
     cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .card-expand {
     width: 30rem;
     max-width: 100%;
     max-height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .links-div {
@@ -100,7 +111,8 @@ a:visited {
 
 @media only screen and (max-width: 1000px) {
     .projects-section {
-        height: 900px;
+        min-height: 900px;
+        max-height: 100%;
         background-color: #a8dadc;
         padding-top: 0.3em;
     }
@@ -119,7 +131,7 @@ a:visited {
 
     .card-project {
         width: 95%;
-        min-height: 150px;
+        min-height: unset;
     }
 
     .links-div {

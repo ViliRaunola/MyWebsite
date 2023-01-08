@@ -29,6 +29,14 @@
     padding-top: 2.5em;
 }
 
+.cards-div-me-section {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 * {
     margin: 0;
 }
@@ -86,6 +94,6 @@
     }
 
     .card-seperator {
-        min-width: revert;
+        min-width: 50%;
     }
 }

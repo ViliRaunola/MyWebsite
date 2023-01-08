@@ -34,42 +34,32 @@ function Section({reference}) {
   return (
     <div ref={reference} className='mesection' >
         <h1 style={{paddingTop: '0.3em', paddingBottom: '1em'}}>About Me</h1>
-
-        <div className='card-div' id='first-box'>
-
-          <img height={150} src={lutLogo} alt='LUT Logo' className='lutLogo'/>
-
-          <div>
-            <h4>Education</h4>
-            <ul className='ul-group'>
-              <li className='li-item-me-section'>Started in LUT 2019</li>
-              <li className='li-item-me-section'>Currently in my {addingSuffixToYear(diffInYears)} year</li>
-              <li className='li-item-me-section'>Bachelor's Degree, completed: Software Engineering, Data Analytics </li>
-              <li className='li-item-me-section'>Master's Degree, underway: Software Engineering, Embedded Systems and Communications</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div className='card-seperator'/>
-
-        <div className='card-div'>
-          <div>
-              <h4>Freetime</h4>
+        <div className='cards-div-me-section'>
+          <div className='card-div' id='first-box'>
+            <img height={150} src={lutLogo} alt='LUT Logo' className='lutLogo'/>
+            <div>
+              <h4>Education</h4>
               <ul className='ul-group'>
-                <li className='li-item-me-section'>Trying my skills on own coding projects</li>
-                <li className='li-item-me-section'>Love to spend my time in nature especially with fishing, discgolfing and cross country skiing</li>
-                <li className='li-item-me-section'>All year bike commuter</li>
+                <li className='li-item-me-section'>Started in LUT 2019</li>
+                <li className='li-item-me-section'>Currently in my {addingSuffixToYear(diffInYears)} year</li>
+                <li className='li-item-me-section'>Bachelor's Degree, completed: Software Engineering, Data Analytics </li>
+                <li className='li-item-me-section'>Master's Degree, underway: Software Engineering, Embedded Systems and Communications</li>
               </ul>
             </div>
-         
-          <img className='fishing-image' src={fishingImage} alt='Me Fishing'/>
-          
-          
-        </div>
-
-       
-        
+          </div>
+          <div className='card-seperator'/>
+          <div className='card-div'>
+            <div>
+                <h4>Freetime</h4>
+                <ul className='ul-group'>
+                  <li className='li-item-me-section'>Trying my skills on own coding projects</li>
+                  <li className='li-item-me-section'>Love to spend my time in nature especially with fishing, discgolfing and cross country skiing</li>
+                  <li className='li-item-me-section'>All year bike commuter</li>
+                </ul>
+              </div>
+            <img className='fishing-image' src={fishingImage} alt='Me Fishing'/>
+          </div>
+      </div>
     </div>
   )
 }
