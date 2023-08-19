@@ -34,14 +34,16 @@ function ProjectCard(props) {
             className="card-expand">
             <p>{props.description}</p>
             <div className="links-div">
-              <a
-                className="underline_link"
-                onClick={(e) => handleLinkClick(e)}
-                href={props.repository}
-                target="_blank"
-                rel="noreferrer">
-                Source code
-              </a>
+              {props.repository && (
+                <a
+                  className="underline_link"
+                  onClick={(e) => handleLinkClick(e)}
+                  href={props.repository}
+                  target="_blank"
+                  rel="noreferrer">
+                  Source code
+                </a>
+              )}
 
               {props.demoVideoLink && (
                 <a

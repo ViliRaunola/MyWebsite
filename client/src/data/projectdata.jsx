@@ -6,8 +6,17 @@ import cLogo from '../images/C_Logo.png';
 import dataintensiveLogo from '../images/3044854.png';
 import androidLogo from '../images/android.png';
 import unity from '../images/unity.png';
+import sern from '../images/serv2.png';
 
 const projects = [
+  {
+    src: sern,
+    text: 'Manufacture Resource Planner',
+    label: 'Kaskein Marja',
+    description:
+      'A MRP system developed for Kaskein Marja during the university course called Running a Software Project. The system is deployed and in active use by Kaskein Marja. There is no repository to show as the source code is private.',
+    demoVideoLink: 'https://youtu.be/_ITZxGm1PFU'
+  },
   {
     src: unity,
     text: 'Summer Job Survival',
