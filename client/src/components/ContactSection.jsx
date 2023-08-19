@@ -1,118 +1,144 @@
-import React from 'react'
-import './ContactSection.css'
-import {GoMarkGithub} from 'react-icons/go'
-import { IoLogoLinkedin } from "react-icons/io";
+import React from 'react';
+import './ContactSection.css';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import emailjs from '@emailjs/browser';
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 
-toast.configure()
+toast.configure();
 
-function ContactSection({reference}) {
-
-  const { register, handleSubmit, formState: { errors } } = useForm();
-
-  // const initialValues = {name: "", email: "", message: ""};
-  // const [formValues, setFormValues] = useState(initialValues);
-  // const [formErrors, setFormErrors] = useState({});
-  // const [isSubmit, setIsSubmit] = useState(false)
-
-  // const handleChange = (e) => {
-  //   const {name, value} = e.target;
-  //   setFormValues({...formValues, [name]: value});
-  // }
-
-  // const validate = (values) => {
-  //   const errors = {};
-  //   const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-  //   if(!values.name){
-  //     errors.name = 'Name is required';
-  //   }
-  //   if(!values.email){
-  //     errors.email = 'Email is required';
-  //   }else if(!regex.test(values.email)){
-  //     errors.email = 'This is not a valid email'
-  //   }
-  //   if(!values.message){
-  //     errors.message = 'Message is required';
-  //   }
-  //   return errors;
-  // }
-
-  // useEffect(() => {
-  //   if(Object.keys(formErrors).length === 0 && isSubmit){
-      
-  //   }
-  // },[formErrors])
-
+function ContactSection({ reference }) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
 
   const sendEmail = (data, e) => {
     e.preventDefault();
-    emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE, process.env.REACT_APP_MAIL_TEMPLATE, e.target, process.env.REACT_APP_MAIL_KEY)
-    .then((result) => {
-        toast('Message has been sent!')
-    }, (error) => {
-        console.log(error.text);
-    });
-    
-    e.target.reset()
-  }
+    emailjs
+      .sendForm(
+        // eslint-disable-next-line no-undef
+        process.env.REACT_APP_MAIL_SERVICE,
+        // eslint-disable-next-line no-undef
+        process.env.REACT_APP_MAIL_TEMPLATE,
+        e.target,
+        // eslint-disable-next-line no-undef
+        process.env.REACT_APP_MAIL_KEY
+      )
+      .then(
+        () => {
+          toast('Message has been sent!');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
-    return (
-      <div ref={reference} className='contactsection'>
-          <h1 style={{paddingTop: '0.3em'}}>Contact Me</h1>
+    e.target.reset();
+  };
 
-          <div className='contact-container'>
-            <div className='info-item-container'>
+  return (
+    <div ref={reference} className="contactsection">
+      <h1 style={{ paddingTop: '0.3em' }}>Contact Me</h1>
 
-              <div className='contact-info-item'>
-                <GoMarkGithub style={{margin: '0.2em', width: '20', height: '20'}}></GoMarkGithub>
-                <a className='underline_link' style={{ color:'black'}} href='https://github.com/ViliRaunola' target='_blank' rel="noreferrer">
-                  <h5 style={{margin: '0.2em'}}>
-                    GitHub
-                  </h5>
-                </a>
-              </div>
-              {/* www.linkedin.com/in/vili-raunola-614920260 */}
-              <div className='contact-info-item'>
-                <IoLogoLinkedin style={{margin: '0.2em', width: '20', height: '20'}}></IoLogoLinkedin>
-                <a className='underline_link' style={{ color:'black'}} href='https://www.linkedin.com/in/vili-raunola-614920260/' target='_blank' rel="noreferrer">
-                  <h5 style={{margin: '0.2em'}}>
-                    LinkedIn
-                  </h5>
-                </a>
-              </div>
+      <div className="contact-container">
+        <div className="info-item-container">
+          <div className="contact-info-item">
+            <GitHubIcon
+              style={{
+                margin: '0.2em',
+                width: '20',
+                height: '20'
+              }}
+            />
+            <a
+              className="underline_link"
+              style={{ color: 'black' }}
+              href="https://github.com/ViliRaunola"
+              target="_blank"
+              rel="noreferrer">
+              <h5 style={{ margin: '0.2em' }}>GitHub</h5>
+            </a>
+          </div>
+          <div className="contact-info-item">
+            <LinkedInIcon
+              style={{
+                margin: '0.2em',
+                width: '20',
+                height: '20'
+              }}
+            />
+            <a
+              className="underline_link"
+              style={{ color: 'black' }}
+              href="https://www.linkedin.com/in/vili-raunola-614920260/"
+              target="_blank"
+              rel="noreferrer">
+              <h5 style={{ margin: '0.2em' }}>LinkedIn</h5>
+            </a>
+          </div>
+        </div>
+
+        <div className="form-container">
+          <form onSubmit={handleSubmit(sendEmail)}>
+            <div className="form-group">
+              <label htmlFor="name">Your name</label>
+              <input
+                className="form-input"
+                type="text"
+                id="name"
+                name="name"
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...register('name', { required: true })}
+              />
+              {errors.name && <p className="error-message">Name is needed!</p>}
             </div>
 
-            <div className='form-container'>
-              <form onSubmit={ handleSubmit(sendEmail)}>
-                <div className='form-group'>
-                  <label htmlFor='name'>Your name</label>
-                  <input className='form-input' type='text' id='name' name='name' {...register("name", { required: true })}></input>
-                  {errors.name && <p className='error-message'>Name is needed!</p>}
-                </div>
-                
-                <div className='form-group'>
-                  <label htmlFor='email'>Your email</label>
-                  <input className='form-input' type='text' id='email' name='email' {...register("email", {pattern:  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,required: true })}></input>
-                  {errors.email && <p className='error-message'>Email is needed!</p>}
-                </div>
+            <div className="form-group">
+              <label htmlFor="email">Your email</label>
+              <input
+                className="form-input"
+                type="text"
+                id="email"
+                name="email"
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...register('email', {
+                  pattern:
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  required: true
+                })}
+              />
+              {errors.email && (
+                <p className="error-message">Email is needed!</p>
+              )}
+            </div>
 
-                <div className='form-group'>
-                  <label htmlFor='text'>Your message</label>
-                  <textarea className='form-input-message' type='text' id='message' name='message' {...register("message", { required: true })}></textarea>
-                  {errors.message && <p className='error-message'>Message is needed!</p>}
-                </div>
+            <div className="form-group">
+              <label htmlFor="text">Your message</label>
+              <textarea
+                className="form-input-message"
+                type="text"
+                id="message"
+                name="message"
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...register('message', { required: true })}
+              />
+              {errors.message && (
+                <p className="error-message">Message is needed!</p>
+              )}
+            </div>
 
-                <button className='button-3' type='submit'>Send</button>
-              </form>
-            </div> 
-          </div>
-        
-          
+            <button className="button-3" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
       </div>
-    )
-  }
+    </div>
+  );
+}
 
-export default ContactSection
+export default ContactSection;

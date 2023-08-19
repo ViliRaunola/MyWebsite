@@ -1,73 +1,70 @@
 .projects-section {
-    max-height: 100%;
-    background-color: #a8dadc;
-    /* padding-top: 0.3em; */
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+  max-height: 100%;
+  background-color: #a8dadc;
+  /* padding-top: 0.3em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .logo-image {
-    height: 150px;
-    padding-bottom: 0.5em;
+  height: 150px;
+  padding-bottom: 0.5em;
 }
 
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: flex-start;
-    gap: 2em;
-    overflow: hidden;
-    height: 100%;
-    min-height: 1275px;
-    width: 100%;
-    max-width: 3000px;
-    margin-bottom: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+  overflow: hidden;
+  height: 100%;
+  min-height: 1275px;
+  width: 100%;
+  max-width: 3000px;
+  margin-bottom: 4em;
 }
 
-.card-project{
-    background-color: #f1faee;
-    padding: 3rem 5rem;
-    width: 100%;
-    max-height: 100%;
-    min-height: 300px;
-    margin-top: 1.5em;
-    flex-basis: 30%;
-    margin-bottom: 3em;
-    cursor: pointer;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.card-project {
+  background-color: #f1faee;
+  padding: 3rem 5rem;
+  width: 100%;
+  max-height: 100%;
+  min-height: 300px;
+  margin-top: 1.5em;
+  flex-basis: 30%;
+  margin-bottom: 3em;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-expand {
-    width: 30rem;
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 30rem;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .links-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em; 
-    margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
 }
-
-
 
 /* .card-div:hover .logo-image {
     animation-name: fade-img;
@@ -76,75 +73,72 @@
   } */
 
 a {
-    background: linear-gradient(0deg,  #457b9d,  #457b9d) no-repeat right bottom / 0 var(--bg-h);
-    transition: background-size 350ms;
-    --bg-h: 100%;
-    line-height: 1;
-    
+  background: linear-gradient(0deg, #457b9d, #457b9d) no-repeat right bottom / 0
+    var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+  line-height: 1;
 }
 a:where(:hover, :focus-visible) {
-    background-size: 100% var(--bg-h);
-    background-position-x: left;
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
 }
 
 .underline_link {
-    padding-bottom: 2px;
-    --bg-h: 2px;
-    text-decoration: none;
-    color: #e63946;
+  padding-bottom: 2px;
+  --bg-h: 2px;
+  text-decoration: none;
+  color: #e63946;
 }
-
 
 a:hover {
-    color:   #457b9d !important;
+  color: #457b9d !important;
 }
 a:visited {
-    color:#F8C9CD;
+  color: #f8c9cd;
 }
 
-
 @keyframes fade-img {
-    100% {
-        transform: scale(1.1)
-    }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-    .projects-section {
-        min-height: 900px;
-        max-height: 100%;
-        background-color: #a8dadc;
-        padding-top: 0.3em;
-    }
+  .projects-section {
+    min-height: 900px;
+    max-height: 100%;
+    background-color: #a8dadc;
+    padding-top: 0.3em;
+  }
 
-    .projects-container {
-        min-height: 2300px;
-        flex-direction: column;
-        justify-content: unset;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
+  .projects-container {
+    min-height: 2300px;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 
-    .logo-image {
-        height: 90px;
-    }
+  .logo-image {
+    height: 90px;
+  }
 
-    .card-project {
-        width: 95%;
-        min-height: unset;
-    }
+  .card-project {
+    width: 95%;
+    min-height: unset;
+  }
 
-    .links-div {
-        flex-direction: column;
-    }
+  .links-div {
+    flex-direction: column;
+  }
 
-    .underline_link {
-        margin-left: 0em;
-        margin-top: 0.5em;
-    }
+  .underline_link {
+    margin-left: 0em;
+    margin-top: 0.5em;
+  }
 
-    .links-div {
-        gap: 0em;
-    }
-
+  .links-div {
+    gap: 0em;
+  }
 }
