@@ -29,6 +29,17 @@ const projects = [
   },
   {
     src: cLogo,
+    text: 'DC-converter controller & converter model controlled by PI-controller',
+    label: 'Embedded systems',
+    description:
+      "Embedded system project, designed, and developed as part of final assignment on a course called 'Embedded System Programming', demonstrates a comprehensive approach to real-time control of a DC-converter designed and implemented on the ZYBO Z-7 development board.",
+    repository:
+      'https://github.com/ViliRaunola/Embedded-System-Programming-Assignment',
+    demoVideoLink:
+      'https://www.youtube.com/watch?v=HlXvMNreUl4&ab_channel=kaalikello'
+  },
+  {
+    src: cLogo,
     text: 'Burglar alarm',
     label: 'Embedded systems',
     description:
