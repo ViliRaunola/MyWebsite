@@ -6,6 +6,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import { useRef, useEffect, useState } from 'react';
+import Welcome from './components/Welcome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
   const meRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const welRef = useRef(null);
 
+  //const [welActive, setWelActive] = useState(false);
   const [meActive, setMeActive] = useState(false);
   const [projectsActive, setProjectsActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
@@ -67,6 +70,7 @@ function App() {
         meVisible={meActive}
         projectsVisible={projectsActive}
         contactVisible={contactActive}></Navbar>
+      <Welcome reference={welRef}></Welcome>
       <MeSection reference={meRef}></MeSection>
       <ProjectsSection reference={projectsRef}></ProjectsSection>
       <ContactSection reference={contactRef}></ContactSection>
