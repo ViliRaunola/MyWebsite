@@ -1,0 +1,20 @@
+h2 {
+  text-align: left;
+}
+
+.projects-container {
+  margin: 3rem 0 0 0;
+}
+
+.projects-selection-container {
+  /* alignment */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-auto-rows: minmax(auto, 40px);
+  text-align: left;
+  align-items: end;
+
+  margin: 2rem 0 0 0;
+  width: 30vw;
+}

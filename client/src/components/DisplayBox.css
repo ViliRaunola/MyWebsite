@@ -1,0 +1,56 @@
+h2 {
+  align-self: flex-start;
+}
+
+p {
+  text-align: left;
+}
+
+img {
+  object-fit: cover;
+  width: 7vw;
+  height: 100%;
+  margin: 1rem 0 1rem 0;
+}
+
+.display-box-container {
+  /* alignment */
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  max-width: 30vw;
+
+  margin: 5rem 0 0 0;
+}
+
+.project-links-container {
+  /* alignment */
+  display: flex;
+  gap: 1rem;
+}
+
+.move {
+  animation-name: move;
+  animation-duration: 1.25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0.2;
+  }
+  40.00% {
+    transform: translateX(-5vw);
+  }
+  65% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-0.5vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
