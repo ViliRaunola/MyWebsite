@@ -8,7 +8,7 @@ const Header = ({ onDataChange }) => {
     onDataChange({
       text: 'Welcome',
       description:
-        'Im a fifth year student at LUT. Im studying Software Engineering and my minor is Embedded Systems and Communications. I completed my batchelors in 2022. Im eager to learn more about software engineering and the world around us! Please, take a look at the projects I have completed over the years!',
+        "I'm a fifth-year student at LUT. I'm studying Software Engineering and my minor is Embedded Systems and Communications. I completed my bachelors in 2022. Im eager to learn more about software engineering and the world around us! Please, take a look at the projects I have completed over the years!",
       demoVideoLink: '',
       repository: '',
       liveBuild: '',

@@ -54,3 +54,25 @@ img {
     transform: translateX(0);
   }
 }
+
+@media only screen and (max-width: 1600px) {
+  img {
+    width: 10vw;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .display-box-container {
+    max-width: 60vw;
+  }
+
+  img {
+    width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 30vw;
+  }
+}

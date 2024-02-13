@@ -50,6 +50,7 @@
   align-self: flex-start;
   justify-content: space-between;
   width: var(--width);
+  gap: 1rem;
 }
 
 @keyframes glow {
@@ -78,5 +79,23 @@
   }
   100% {
     border-color: var(--red);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .container-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-welcome {
+    height: auto;
+    padding: 5rem 0 5rem 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-welcome {
+    padding: 2rem 1rem 2rem 1rem;
   }
 }
