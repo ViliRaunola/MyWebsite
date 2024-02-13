@@ -19,8 +19,8 @@
       rgba(0, 100, 200, 1)
     );
   background-size:
-    100% 2px,
-    0 2px;
+    100% 1px,
+    0 1px;
 
   background-position:
     100% 100%,
@@ -39,7 +39,7 @@
 .container-content a:hover {
   font-size: 17px; /* Font size on hover */
   background-size:
-    0 2px,
-    100% 2px;
+    0 1px,
+    100% 1px;
   color: var(--white) !important;
 }

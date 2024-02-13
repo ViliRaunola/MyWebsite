@@ -3,7 +3,7 @@ import './ProjectSelection.css';
 import projects from '../data/projectdata';
 import ProjectLink from './ProjectLink';
 
-const ProjectSelection = ({ onDataChange }) => {
+const ProjectSelection = ({ onDataChange, slideRef }) => {
   return (
     <div className="projects-container">
       <h2>Projects</h2>
@@ -13,6 +13,7 @@ const ProjectSelection = ({ onDataChange }) => {
             key={project.text}
             project={project}
             onDataChange={onDataChange}
+            slideRef={slideRef}
           />
         ))}
       </div>

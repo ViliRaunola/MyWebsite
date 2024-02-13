@@ -21,8 +21,8 @@
 .container-inner::before,
 .container-inner::after {
   position: absolute;
-  width: 66px;
-  height: 30px;
+  width: 100px;
+  height: 40px;
   content: '';
 }
 
@@ -32,7 +32,7 @@
   border-left: 6px solid var(--white);
   border-top: 6px solid var(--white);
   border-radius: 4px;
-  animation: 30s infinite glow;
+  animation: 20s infinite glow;
 }
 
 .container-inner::after {
@@ -41,7 +41,7 @@
   border-right: 6px solid var(--white);
   border-bottom: 6px solid var(--white);
   border-radius: 4px;
-  animation: 30s infinite glow;
+  animation: 20s infinite glow;
 }
 
 .container-content {
