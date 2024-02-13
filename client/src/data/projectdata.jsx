@@ -5,7 +5,7 @@ import mernLogo from '../images/MERN-logo.png';
 import cLogo from '../images/C_Logo.png';
 import dataintensiveLogo from '../images/3044854.png';
 import androidLogo from '../images/android.png';
-import unity from '../images/unity.png';
+import unity from '../images/Unity-Logo-White.webp';
 import sern from '../images/serv2.png';
 
 const projects = [

@@ -1,0 +1,23 @@
+:root {
+  --main-black: #000;
+  --red: #eb3440;
+  --purple: #eb3499;
+  --blue: #6234eb;
+  --white: #d1d1d1;
+  --grey: #808080;
+
+  --width: 70vw;
+  --tablet-width: 1600px;
+}
+
+h1 {
+  color: var(--white) !important;
+}
+
+h2 {
+  color: var(--white) !important;
+}
+
+p {
+  color: var(--grey) !important;
+}

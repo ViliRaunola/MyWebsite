@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProjectsSection.css';
 import ProjectCard from './ProjectCard';
-import projects from '../data/projectdata';
+import projects from '../../data/projectdata';
 
 function ProjectSection({ reference }) {
   return (
