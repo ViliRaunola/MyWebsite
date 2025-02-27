@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: var(--font-poppins-sans);
+    --font-mono: var(--font-poppins-mono);
+
+    --color-secondary: var(--secondary);
+    --color-accent: var(--accent);
+    --color-secondary-hover: var(--secondary-dark);
+    --color-secondary-text: var(--secondary-text);
+    --color-foreground: var(--foreground);
+    --shadow-secondary:
+        0 5px 10px color-mix(in srgb, #ca8a04, transparent 95%),
+        0 20px 50px color-mix(in srgb, #ca8a04, transparent 80%);
+    --shadow-secondary-hover:
+        0 5px 10px color-mix(in srgb, #ca8a04, transparent 90%),
+        0 20px 50px color-mix(in srgb, #ca8a04, transparent 60%);
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --primary: #09122c;
+    --secondary: #872341;
+    --secondary-dark: #4d1929;
+    --accent: #be3144;
+    --white: #faf9f6;
+    --secondary-text: #a7a7a7;
+
+    --star-color: #ffffff;
+    --star-glow: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    color: var(--white);
+    background: var(--background);
+    font-family: 'Poppins', sans-serif;
+}
+
+.starry-night {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(
+        to bottom,
+        var(--foreground) 0%,
+        var(--primary) 100%
+    ); */
+    background-color: var(--foreground);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    background-color: var(--star-color);
+    border-radius: 50%;
+    animation: twinkle 5s infinite;
+}
+
+.text-shadow-secondary {
+    text-shadow:
+        0 5px 10px rgba(135, 35, 65, 0.3),
+        0 20px 50px rgba(135, 35, 65, 0.2);
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
