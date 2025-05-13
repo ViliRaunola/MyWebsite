@@ -1,15 +1,16 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-    async redirects() {
-        return [
-            {
-                source: '/',
-                destination: '/welcome',
-                permanent: true // set to true if this is a permanent redirect
-            }
-        ]
-    },
+    // async redirects() {
+    //     return [
+    //         {
+    //             source: '/',
+    //             destination: '/welcome',
+    //             permanent: true // set to true if this is a permanent redirect
+    //         }
+    //     ]
+    // },
+    // basePath: '/MyWebsite',
     images: {
         unoptimized: true
     },

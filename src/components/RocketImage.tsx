@@ -1,9 +1,10 @@
+import { prefix } from '@/constants/prefix'
 import Image from 'next/image'
 
 export default function RocketImage() {
     return (
         <Image
-            src={'/rocket-svgrepo-com.svg'}
+            src={`${prefix}/rocket-svgrepo-com.svg`}
             alt={''}
             width={15}
             height={15}

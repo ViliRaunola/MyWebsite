@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Element } from 'react-scroll/modules'
 import { projects } from '@/constants/projects'
+import { prefix } from '@/constants/prefix'
 
 export interface Project {
     id: string
@@ -35,7 +36,7 @@ export default function Projects() {
                         >
                             <div className="relative w-full h-48 overflow-hidden group">
                                 <Image
-                                    src={`${p.imageSrc}`}
+                                    src={`${prefix}/${p.imageSrc}`}
                                     alt={p.title}
                                     fill
                                     className="object-cover"
